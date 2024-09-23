@@ -110,7 +110,7 @@
                 </div>
             </div>
             <!-- second card -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 border border-gray-400 rounded-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 border border-gray-400 rounded-xl mt-8">
                 <div class="">
                     <img class="w-full p-8" src="./assets/feni.png" alt="">
                 </div>
@@ -160,7 +160,7 @@
                 </div>
             </div>
             <!-- third card -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 border border-gray-400 rounded-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 border border-gray-400 rounded-xl mt-8">
                 <div class="">
                     <img class="w-full p-8" src="./assets/quota-protest.png" alt="">
                 </div>
@@ -170,7 +170,7 @@
                     <div
                         class="w-max h-max mb-4 px-4 py-3 flex justify-center gap-2 rounded-lg items-center bg-[#f3f3f3]">
                         <img src="./assets/coin.png" alt="">
-                        <p><span>0</span> BDT </p>
+                        <p><span id="total-q-donation" >0</span> BDT </p>
                     </div>
 
                     <div class="space-y-4">
@@ -184,11 +184,11 @@
                             Please consider making a donation to support these brave individuals in their time of need.
                         </p>
                     </div>
-                    <input type="text" id=""
+                    <input type="text" id="quota-input"
                         class="w-full h-14 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 mt-6"
                         placeholder="Write Donation Amount" />
 
-                    <button disabled id="quota-input" class="text-xl h-14 w-full font-semibold btn bg-[#B4F461] mt-4 my-button">Donate Now</button>
+                    <button disabled id="btn-quota" class="text-xl h-14 w-full font-semibold btn  bg-[#B4F461] mt-4 my-button">Donate Now</button>
 
 
                 </div>
@@ -198,7 +198,7 @@
 
         <!-- history -->
         <section class="container mx-auto border border-gray-800 rounded-lg">
-            <div id="history-items" class="grid grid-rows-3 p-8 gap-3"></div>
+            <div id="history-items" class="grid grid-rows-3 p-8 gap-6"></div>
         </section>
         <script src="./js/index.js"></script>
         <script src="./js/utilities.js"></script>
