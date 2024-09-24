@@ -29,3 +29,15 @@ function activationStyles (shows, hides) {
    document.getElementById(hides).classList.add('text-gray-500');
    document.getElementById(hides).classList.remove('bg-[#B4F461]');
 }
+
+
+
+// toggling from blog to home
+function toggleHomeBlogButtons() {
+   let home = document.getElementById('btn-home');
+   let blog = document.getElementById('btn-blog');
+
+   home.classList.toggle('hidden');
+   blog.classList.toggle('hidden');
+}
+

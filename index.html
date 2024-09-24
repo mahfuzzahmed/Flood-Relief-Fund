@@ -24,39 +24,42 @@
 
 <body class="font-lexend ">
 
-    <nav
-        class="mt-6 border border-red-500 sticky top-0 z-10 overflow-hidden container mx-auto bg-transparent backdrop-blur-md bg-white/30">
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-                <div>
-                    <button class="btn bg-[#B4F461] text-xl font-semibold">Blog</button>
-                </div>
-            </div>
-            <div class="navbar-center hidden lg:block">
-                <div class="flex justify-center items-center">
-                    <img src="./assets/logo.png" alt="">
-                    <a class="btn btn-ghost text-xl">Donate Bangladesh</a>
-                </div>
+    <nav class=" sticky top-0 z-10 backdrop-blur-xl  ">
+        <section class="bg-[#F9F7F3] bg-opacity-65">
+            <div class="container mx-auto px-4 lg:px-0  ">
+                <div class="navbar">
+                    <div class="navbar-start">
+                        <div>
+                            <button id="btn-blog" onclick="window.location.href='blog.html';"
+                                class="btn bg-[#B4F461] text-xl font-semibold">Blog</button>
+                        </div>
+                    </div>
+                    <div class="navbar-center hidden lg:block">
+                        <div class="flex justify-center items-center">
+                            <img src="./assets/logo.png" alt="">
+                            <a class="btn btn-ghost text-xl">Donate Bangladesh</a>
+                        </div>
 
-            </div>
-            <div class="navbar-end">
-                <div class="flex justify-center items-center text-xl font-medium gap-3 text-gray-500">
-                    <img src="./assets/coin.png" alt="">
-                    <p><span id="my-balance">5500</span> BDT</p>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="flex justify-center items-center text-xl font-medium gap-3 text-gray-500">
+                            <img src="./assets/coin.png" alt="">
+                            <p><span id="my-balance">5500</span> BDT</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+        <div class="flex justify-center items-center gap-4 pt-8 pb-7">
+            <button id="show-btn-donation" class="text-xl btn font-semibold  bg-[#B4F461]">Donation</button>
+            <button id="show-btn-history" class="text-xl btn font-semibold  text-gray-500  btn-outline">History</button>
         </div>
-    </nav>
 
+    </nav>
 
     <main class="container mx-auto pb-52">
         <!-- donation button and history -->
-        <section class="pt-20 pb-8">
-            <div class="flex justify-center items-center gap-4">
-                <button id="show-btn-donation" class="text-xl btn font-semibold  bg-[#B4F461]">Donation</button>
-                <button id="show-btn-history" class="text-xl btn font-semibold  text-gray-500  btn-outline">History</button>
-            </div>
-        </section>
+
         <!-- collection of cards -->
         <section id="collection" class="">
             <!-- first card -->
@@ -95,12 +98,12 @@
                     <dialog id="my_modal_1" class="modal">
                         <div class="modal-box flex flex-col items-center">
                             <h3 class="lg:text-4xl text-2xl font-extrabold lg:mb-5 mb-2">Congrates!</h3>
-                            <img class="lg:w-10 w-8 lg:mb-4 mb-2" src="./assets/coin.png" alt="">
+                            <img class="lg:w-10 w-8 lg:mb-3 mb-2" src="./assets/coin.png" alt="">
                             <p class="py-5">You Have Donated for Humankind</p>
                             <p class="font-extrabold lg:text-xl text-lg">Successfully</p>
                             <div class="modal-action">
                                 <form method="dialog">
-                                    <!--  -->
+                                    
                                     <button class="btn bg-[#B4F461] font-bold">Close Confirmation</button>
                                 </form>
                             </div>
@@ -186,17 +189,18 @@
 
         <!-- history -->
         <section id="historySection" class="hidden container mx-auto border border-gray-800 rounded-lg">
-            <div id="history-items" class="grid grid-rows-3 p-8 gap-6">
+            <div id="history-items" class="grid p-8 gap-6">
             </div>
         </section>
 
 
-        <!-- connecting javaScript -->
-        <script src="./js/index.js"></script>
-        <script src="./js/utilities.js"></script>
-        <script src="./js/card2.js"></script>
-        <script src="./js/card3.js"></script>
+
     </main>
+    <!-- connecting javaScript -->
+    <script src="./js/index.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/card2.js"></script>
+    <script src="./js/card3.js"></script>
 </body>
 
 </html>
