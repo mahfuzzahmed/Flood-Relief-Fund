@@ -57,7 +57,7 @@ document.getElementById('noakhali-input').addEventListener('input', function () 
 
 
 
-// toggling buttons
+// changing buttons color
 document.getElementById('show-btn-donation').addEventListener('click',function(){
 
     showButtons('collection')
