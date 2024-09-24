@@ -22,7 +22,7 @@ document.getElementById('btn-noakhali').addEventListener('click', function () {
         const historyItems = document.createElement('div');
         historyItems.className = "container border border-gary-500 mx-auto rounded-lg p-8"
         historyItems.innerHTML = `
-    <p class="text-xl font-bold">${noakhaliDonationAmount} Taka is Donated for famine-2024 at Noakhali, Bangladesh </p>
+    <p class="text-xl font-bold">${noakhaliDonationAmount} Taka is Donated for Flood at Noakhali, Bangladesh </p>
     <p class="text-base mt-4 text-gray-500">Date : ${new Date().toString()}</p>
     
     
@@ -75,16 +75,6 @@ document.getElementById('show-btn-history').addEventListener('click',function(){
 
 
 
-// toggling from blog to home
-// document.getElementById('btn-blog').addEventListener('click',function(){
-    
-//     window.location.href = './blog.html';
-// })
-// document.getElementById('btn-home').addEventListener('click',function(){
-//     console.log('home button clicked')
-    
-//     window.location.href = './index.html';
-// })
 
 
 
