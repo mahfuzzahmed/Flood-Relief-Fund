@@ -57,3 +57,21 @@ document.getElementById('noakhali-input').addEventListener('input', function () 
 
 
 
+// toggling buttons
+document.getElementById('show-btn-donation').addEventListener('click',function(){
+
+    showButtons('collection')
+
+    activationStyles('show-btn-donation', 'show-btn-history');
+
+})
+document.getElementById('show-btn-history').addEventListener('click',function(){
+
+    showButtons('historySection')
+
+    activationStyles('show-btn-history', 'show-btn-donation');
+})
+
+
+
+

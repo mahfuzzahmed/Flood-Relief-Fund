@@ -23,41 +23,42 @@
 </head>
 
 <body class="font-lexend ">
-    <header class="container mx-auto">
-        <nav class="pt-6">
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                    <div>
-                        <button class="btn bg-[#B4F461] text-xl font-semibold">Blog</button>
-                    </div>
-                </div>
-                <div class="navbar-center hidden lg:block">
-                    <div class="flex justify-center items-center">
-                        <img src="./assets/logo.png" alt="">
-                        <a class="btn btn-ghost text-xl">Donate Bangladesh</a>
-                    </div>
 
-                </div>
-                <div class="navbar-end">
-                    <div class="flex justify-center items-center text-xl font-medium gap-3 text-gray-500">
-                        <img src="./assets/coin.png" alt="">
-                        <p><span id="my-balance">5500</span> BDT</p>
-                    </div>
+    <nav
+        class="mt-6 border border-red-500 sticky top-0 z-10 overflow-hidden container mx-auto bg-transparent backdrop-blur-md bg-white/30">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div>
+                    <button class="btn bg-[#B4F461] text-xl font-semibold">Blog</button>
                 </div>
             </div>
-        </nav>
+            <div class="navbar-center hidden lg:block">
+                <div class="flex justify-center items-center">
+                    <img src="./assets/logo.png" alt="">
+                    <a class="btn btn-ghost text-xl">Donate Bangladesh</a>
+                </div>
 
-    </header>
+            </div>
+            <div class="navbar-end">
+                <div class="flex justify-center items-center text-xl font-medium gap-3 text-gray-500">
+                    <img src="./assets/coin.png" alt="">
+                    <p><span id="my-balance">5500</span> BDT</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
     <main class="container mx-auto pb-52">
         <!-- donation button and history -->
         <section class="pt-20 pb-8">
             <div class="flex justify-center items-center gap-4">
-                <button class="text-xl font-semibold btn bg-[#B4F461]">Donation</button>
-                <button class="text-xl text-gray-500 font-medium btn btn-outline">History</button>
+                <button id="show-btn-donation" class="text-xl btn font-semibold  bg-[#B4F461]">Donation</button>
+                <button id="show-btn-history" class="text-xl btn font-semibold  text-gray-500  btn-outline">History</button>
             </div>
         </section>
         <!-- collection of cards -->
-        <section class="">
+        <section id="collection" class="">
             <!-- first card -->
             <div class="grid grid-cols-1 lg:grid-cols-2 border border-gray-400 rounded-xl">
                 <div class="">
@@ -84,7 +85,7 @@
                             efforts and making a positive impact on the lives of those in need.
                         </p>
                     </div>
-                    <input type="text" id="noakhali-input"
+                    <input type="number" id="noakhali-input"
                         class="w-full h-14 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 mt-6"
                         placeholder="Write Donation Amount" />
 
@@ -100,7 +101,7 @@
                             <div class="modal-action">
                                 <form method="dialog">
                                     <!--  -->
-                                    <button class="btn font-bold">Close Confirmation</button>
+                                    <button class="btn bg-[#B4F461] font-bold">Close Confirmation</button>
                                 </form>
                             </div>
                         </div>
@@ -134,27 +135,13 @@
                             urgent need.
                         </p>
                     </div>
-                    <input type="text" id="feni-input"
+                    <input type="number" id="feni-input"
                         class="w-full h-14 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 mt-6"
                         placeholder="Write Donation Amount" />
 
-                    <button id="btn-feni" disabled class="text-xl h-14 w-full font-semibold btn bg-[#B4F461] mt-4 my-button">Donate Now</button>
-                    <!-- modal -->
-                    <dialog id="my_modal_1" class="modal">
-                        <div class="modal-box flex flex-col items-center">
-                            <h3 class="lg:text-4xl text-2xl font-extrabold lg:mb-5 mb-2">Congrates!</h3>
-                            <img class="lg:w-10 w-8 lg:mb-4 mb-2" src="./assets/coin.png" alt="">
-                            <p class="py-5">You Have Donated for Humankind</p>
-                            <p class="font-extrabold lg:text-xl text-lg">Successfully</p>
-                            <div class="modal-action">
-                                <form method="dialog">
-                                    <!--  -->
-                                    <button class="btn font-bold">Close Confirmation</button>
-                                </form>
-                            </div>
-                        </div>
-                    </dialog>
-                    <!-- end -->
+                    <button id="btn-feni" disabled
+                        class="text-xl h-14 w-full font-semibold btn bg-[#B4F461] mt-4 my-button">Donate Now</button>
+
 
 
                 </div>
@@ -170,7 +157,7 @@
                     <div
                         class="w-max h-max mb-4 px-4 py-3 flex justify-center gap-2 rounded-lg items-center bg-[#f3f3f3]">
                         <img src="./assets/coin.png" alt="">
-                        <p><span id="total-q-donation" >0</span> BDT </p>
+                        <p><span id="total-q-donation">0</span> BDT </p>
                     </div>
 
                     <div class="space-y-4">
@@ -184,11 +171,12 @@
                             Please consider making a donation to support these brave individuals in their time of need.
                         </p>
                     </div>
-                    <input type="text" id="quota-input"
+                    <input type="number" id="quota-input"
                         class="w-full h-14 border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 mt-6"
                         placeholder="Write Donation Amount" />
 
-                    <button disabled id="btn-quota" class="text-xl h-14 w-full font-semibold btn  bg-[#B4F461] mt-4 my-button">Donate Now</button>
+                    <button disabled id="btn-quota"
+                        class="text-xl h-14 w-full font-semibold btn  bg-[#B4F461] mt-4 my-button">Donate Now</button>
 
 
                 </div>
@@ -197,9 +185,13 @@
 
 
         <!-- history -->
-        <section class="container mx-auto border border-gray-800 rounded-lg">
-            <div id="history-items" class="grid grid-rows-3 p-8 gap-6"></div>
+        <section id="historySection" class="hidden container mx-auto border border-gray-800 rounded-lg">
+            <div id="history-items" class="grid grid-rows-3 p-8 gap-6">
+            </div>
         </section>
+
+
+        <!-- connecting javaScript -->
         <script src="./js/index.js"></script>
         <script src="./js/utilities.js"></script>
         <script src="./js/card2.js"></script>
